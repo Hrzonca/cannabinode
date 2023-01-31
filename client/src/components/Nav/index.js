@@ -37,7 +37,7 @@ function Nav() {
               Login
             </Link>
            <li >
-            <Link to="/education">
+            <Link to="/Education">
              Education
             </Link>
           </li>

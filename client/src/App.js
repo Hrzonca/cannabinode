@@ -14,6 +14,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Education from './pages/Education';
 import { StoreProvider } from './utils/GlobalState';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
@@ -57,6 +58,10 @@ function App() {
               <Route 
                 path="/signup" 
                 element={<Signup />} 
+              />
+               <Route 
+                path="/education" 
+                element={<Education />} 
               />
               <Route 
                 path="/success" 

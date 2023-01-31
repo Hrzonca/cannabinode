@@ -82,7 +82,8 @@ a:hover {
 }
 
 header {
-  background: var(--green);
+  background: url('./assets/cannabis-leaf-svgrepo-com.svg');
+  background-color: var(--green);
 }
 
 header h1 {
@@ -187,7 +188,28 @@ input:focus {
   margin-left: auto;
   margin-right: auto;
 }
-
+.education-container {
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.education-h1-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.education-h1-div h1{
+  background-color: red;
+  padding: 30px;
+}
+.education-h1 {
+  background-color: red;
+  padding: 15px;
+}
+.edcucation-container-content ul{
+  list-style-image: url(./assets/cannabis-leaf-svgrepo-com.svg);
+}
 .flex-row {
   display: flex;
   flex-wrap: wrap;
