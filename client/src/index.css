@@ -80,13 +80,34 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: #35CE8D;
 }
 
-header a {
-  color: var(--light);
+header h1 {
+  display: inline-block;
 }
-
+header ul {
+  list-style-type: none;
+  padding: 8px;
+}
+header ul li{
+  display: inline-block;
+  padding: 10px;
+}
+header ul a {
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background .3s ease-in-out;
+}
+header ul a:hover {
+  color: blue;
+  text-decoration: none;
+  background-color: #DCDCDD60;
+  transition: color .3s ease-in-out;
+}
 button {
   font-size: 1rem;
   text-decoration: none;
