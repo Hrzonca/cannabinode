@@ -13,7 +13,8 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    quantity
+    quantity,
+    denomination
   } = item;
 
   const { cart } = state
@@ -49,6 +50,7 @@ function ProductItem(item) {
         <p>{name}</p>
       </Link>
       <div>
+        <div>Type: {denomination}</div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>

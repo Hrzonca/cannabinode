@@ -12,6 +12,7 @@ export const QUERY_PRODUCTS = gql`
       category {
         _id
       }
+      denomination
     }
   }
 `;
@@ -35,6 +36,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       category {
         name
       }
+      denomination
     }
   }
 `;
@@ -63,6 +65,7 @@ export const QUERY_USER = gql`
           price
           quantity
           image
+          denomination
         }
       }
     }
