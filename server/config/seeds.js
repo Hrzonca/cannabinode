@@ -101,7 +101,7 @@ db.once('open', async () => {
       name: 'Grand Daddy Purple',
       category: categories[0]._id,
       description: 'Most popular indica strain that promotes sleep. Flower has a deep purple bud with orange hairs. Helps with insomnia, stress, pain and muscle spasms.',
-      image: 'preroll.jpg',
+      image: 'preroll.jpeg',
       price: 6.00,
       quantity: 10,
       denomination: 'Indica' 
@@ -111,7 +111,7 @@ db.once('open', async () => {
       category: categories[2]._id,
       description:
         'This strain gives an arousing, giggly and uplifting high. Cross between lemonnade, gelato 42 and london pound cake 97.',
-      image: 'flower-picture.jpg',
+      image: 'flower-picture.jpeg',
       price: 30.00,
       quantity: 10,
       denomination: 'Hybrid' 
