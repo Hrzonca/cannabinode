@@ -125,7 +125,7 @@ button {
   font-size: 20px;
   background-color: #35CE8D;
   margin: 0 1px;
-  transition: all .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 button:hover {
@@ -143,8 +143,12 @@ button[disabled] {
   color: white;
   padding: 10px;
 }
+
 .active {
   background-color: red;
+}
+.inactive {
+  background-color: blue;
 }
 img {
   max-width: 100%;
