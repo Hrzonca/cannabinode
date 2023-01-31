@@ -24,7 +24,9 @@ function Nav() {
     } else {
       return (
         <ul>
-                 <h1 role="img" aria-label="shopping bag">Cannabinode</h1>
+          <Link to="/">
+           <h1 role="img" aria-label="shopping bag">Cannabinode</h1>
+           </Link>
           <li >
             <Link to="/signup">
               Signup
@@ -34,6 +36,11 @@ function Nav() {
             <Link to="/login">
               Login
             </Link>
+           <li >
+            <Link to="/education">
+             Education
+            </Link>
+          </li>
           </li>
         </ul>
       );

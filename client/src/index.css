@@ -87,6 +87,12 @@ header {
 
 header h1 {
   display: inline-block;
+  text-decoration: underline;
+  color: var(--grey)
+  transition
+}
+header h1:hover {
+  color: blue;
 }
 header ul {
   list-style-type: none;
@@ -104,7 +110,7 @@ header ul a {
   margin: 5px;
   transition: background .3s ease-in-out;
 }
-header ul a:hover {
+header ul li a:hover {
   color: blue;
   text-decoration: none;
   background-color: #DCDCDD60;
@@ -121,7 +127,7 @@ button {
   font-size: 20px;
   background-color: #35CE8D;
   margin: 0 1px;
-  transition: all .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 button:hover {
@@ -139,8 +145,12 @@ button[disabled] {
   color: white;
   padding: 10px;
 }
+
 .active {
   background-color: red;
+}
+.inactive {
+  background-color: blue;
 }
 img {
   max-width: 100%;
@@ -150,7 +160,7 @@ img {
 }
 
 span[role="img"] {
-  cursor: default;
+  cursor: pointer;
 }
 
 form {
