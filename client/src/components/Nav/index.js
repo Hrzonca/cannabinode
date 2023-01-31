@@ -7,8 +7,8 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
+        <ul >
+          <li >
             <Link to="/orderHistory">
               Order History
             </Link>
@@ -23,13 +23,14 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
+        <ul>
+                 <h1 role="img" aria-label="shopping bag">Cannabinode</h1>
+          <li >
             <Link to="/signup">
               Signup
             </Link>
           </li>
-          <li className="mx-1">
+          <li >
             <Link to="/login">
               Login
             </Link>
@@ -41,16 +42,10 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">Cannabinode</span>
-        </Link>
-      </h1>
-
       <nav>
         {showNavigation()}
       </nav>
-    </header>
+   </header>
   );
 }
 
