@@ -8,6 +8,11 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <ul >
+          <li>
+            <Link to="/">
+               <h1>Cannabinode</h1>
+            </Link>
+          </li>
           <li >
             <Link to="/orderHistory">
               Order History
@@ -29,9 +34,11 @@ function Nav() {
     } else {
       return (
         <ul>
-          <Link to="/">
-           <h1 role="img" aria-label="shopping bag">Cannabinode</h1>
-           </Link>
+          <li>
+            <Link to="/">
+               <h1>Cannabinode</h1>
+            </Link>
+          </li>
           <li >
             <Link to="/signup">
               Signup
