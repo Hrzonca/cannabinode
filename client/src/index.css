@@ -344,6 +344,10 @@ height: 95%;
   color: var(--error);
 }
 
+.strong {
+  color: yellow;
+}
+
 @media screen and (max-width: 1200px) {
   .body-grid {
     grid-template-columns: 1fr 1fr 1fr;

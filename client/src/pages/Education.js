@@ -46,6 +46,10 @@ const Education = () => {
                 <p>Cannabis comes in many forms to give the user options on how they want to ingest it. Forms include flower, topical, edible, tincutre, and extract. </p>
 
             </div>
+
+            <div className="mb-5 education-footer">
+                <p><strong className="strong">Warning: </strong>MArijuana has intoxicating effects and may be habit forming. Smoking is hazardous to your health. There may be health risks associated with the consumptions of marijuana. Marijuana should not be used while pregnant or breastfeeding. Marijuana can impair coordination, concentration, and judgement. Please do not drive while under the influence of marijuana. If you are taking any perscription medications, please consult your physicion on how marijuana may interact your meducation. </p>
+            </div>
         </div>
     )
 };
