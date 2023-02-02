@@ -74,6 +74,10 @@ const resolvers = {
           price: price.id,
           quantity: 1
         });
+
+        // shipping_address_collection.? ({
+        //   allowed_countries: 'US'
+        // })
       }
 
       const session = await stripe.checkout.sessions.create({
