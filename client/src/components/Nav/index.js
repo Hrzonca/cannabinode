@@ -19,7 +19,6 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
             <a href="/" onClick={() => Auth.logout()}>
               Logout
             </a>
@@ -39,20 +38,20 @@ function Nav() {
                <h1>Cannabinode</h1>
             </Link>
           </li>
-          <li >
-            <Link to="/signup">
-              Signup
-            </Link>
-          </li>
-          <li >
-            <Link to="/login">
-              Login
-            </Link>
-           <li >
-            <Link to="/Education">
-             Education
-            </Link>
-          </li>
+         <li>
+            <li >
+              <Link to="/signup">
+                Signup
+              </Link>
+            </li>
+              <Link to="/login">
+                Login
+              </Link>
+            <li >
+              <Link to="/Education">
+              Education
+              </Link>
+            </li>
           </li>
         </ul>
       );
