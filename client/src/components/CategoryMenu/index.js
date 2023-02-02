@@ -53,25 +53,29 @@ function CategoryMenu() {
   };
 
   return (
-    <div className='category-container'>
-      <h2>Choose a Category:</h2>
-        <button className={"category-buttons"}
- onClick={() => {
-            handleClick();
-          }}>All</button>
-      {categories.map((item) => (
-        <button
-          key={item._id}
-          className={"category-buttons"}
-          onClick={() => {
-            handleClick(item._id);
-          }}
-        >
-          {item.name}
-        </button>
-      ))}
-      <ul className='filter-denomination-ul'>
-        <h2>Filter by Denomination</h2>
+      <div className='category-container'>
+        <h2>Choose a Category:</h2>
+        <ul className='filter-ul'>
+            <button className={"category-buttons"}
+    onClick={() => {
+                handleClick();
+              }}>All</button>
+          {categories.map((item) => (
+            <li>
+              <button
+                key={item._id}
+                className={"category-buttons"}
+                onClick={() => {
+                  handleClick(item._id);
+                }}
+              >
+                {item.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+     <h2>Filter by Denomination:</h2>
+      <ul className='filter-ul'>
         <li>
           <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
             handleClick(currentCategory)}}>Indica</button>

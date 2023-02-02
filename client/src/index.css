@@ -141,7 +141,7 @@ button[disabled] {
 }
 .category-buttons {
   font-size: 25px;
-  margin: 15px;
+  margin: 2px;
   background-color: var(--grey);
   color: white;
   padding: 10px;
@@ -223,11 +223,10 @@ input:focus {
   grid-template-areas: 'main1 main2';
 }
 
-.filter-denomination-ul {
+.filter-ul {
   list-style-type: none;
-  display: inline;
 }
-.filter-denomination-ul li{
+.filter-ul li{
   display: inline;
   padding: 1px;
 }
@@ -238,7 +237,9 @@ input:focus {
 }
 .filter-button{
   width: 100px;
-  text-align: center;
+  padding: 7px;
+  margin: 2px;
+  color: white;
 }
 
 .justify-content-center {

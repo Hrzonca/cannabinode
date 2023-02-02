@@ -53,7 +53,10 @@ function ProductItem(item) {
         <div className="flex-row">
             <h3 className={denomination.toLowerCase()}>{denomination}</h3>
         </div>
-        <div>{quantity} {pluralize("item", quantity)} in stock</div>
+      {quantity < 5 ?
+       <div><strong>Act Fast -</strong> Only {quantity} {pluralize("item", quantity)} left in stock!</div> :
+       <div>{quantity} {pluralize("item", quantity)} left in stock</div>
+      }
         <span>${price}</span>
       </div>
       <button onClick={addToCart}>Add to cart</button>
