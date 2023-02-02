@@ -19,6 +19,11 @@ function Nav() {
               Logout
             </a>
           </li>
+          <li >
+            <Link to="/Education">
+             Education
+            </Link>
+          </li>
         </ul>
       );
     } else {
