@@ -32,10 +32,14 @@ function ProductList({ denomination }) {
     }
   }, [data, loading, dispatch]);
   function filterProducts() {
-    if (!currentCategory) {
-      return state.products;
-    }
     let results;
+    if (!currentCategory) {
+      results = state.products.filter(
+        (product) => 
+        product.denomination === denomination || denomination === "",
+      );
+      return results
+    }
     if(denomination !== "") {
       results = state.products.filter(
         (product) => product.category._id === currentCategory &&
