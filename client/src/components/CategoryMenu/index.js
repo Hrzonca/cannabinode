@@ -74,7 +74,7 @@ function CategoryMenu() {
         <h2>Filter by denomination</h2>
         <li>
           <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
-            handleClick(currentCategory)}}>indica</button>
+            handleClick(currentCategory)}}>Indica</button>
         </li>
         <li>
           <button className = {denom === "Sativa" ? 'filter-button-active' : 'filter-button'} onClick={() => {setDenom("Sativa");
