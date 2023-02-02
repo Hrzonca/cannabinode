@@ -47,10 +47,12 @@ function ProductItem(item) {
           alt={name}
           src={`/images/${image}`}
         />
-        <p>{name}</p>
+        <h2>{name}</h2>
       </Link>
       <div>
-        <div>Type: {denomination}</div>
+        <div className="flex-row">
+            <h3 className={denomination.toLowerCase()}>{denomination}</h3>
+        </div>
         <div>{quantity} {pluralize("item", quantity)} in stock</div>
         <span>${price}</span>
       </div>

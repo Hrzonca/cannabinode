@@ -71,7 +71,7 @@ function CategoryMenu() {
         </button>
       ))}
       <ul className='filter-denomination-ul'>
-        <h2>Filter by denomination</h2>
+        <h2>Filter by Denomination</h2>
         <li>
           <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
             handleClick(currentCategory)}}>Indica</button>
