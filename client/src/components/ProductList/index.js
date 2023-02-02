@@ -47,7 +47,7 @@ function ProductList({ denomination }) {
     results = state.products.filter(
       (product) => product.category._id === currentCategory,
     );
-
+      console.log(results)
     return results
   }
   return (
@@ -66,7 +66,6 @@ function ProductList({ denomination }) {
               />
             ))}
           </div>
-        {loading ? <img src={spinner} alt="loading" /> : null}
       </div>
   );
 }

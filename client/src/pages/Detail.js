@@ -84,30 +84,35 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-        <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+         <div className="container my-1">
+           <div className='single-view-grid'>
+            <div className='main1'>
+              <Link to="/">← Back to Products</Link>
 
-          <h2>{currentProduct.name}</h2>
+              <h2>{currentProduct.name}</h2>
 
-          <p>{currentProduct.description}</p>
+              <p>{currentProduct.description}</p>
 
-          <p><strong>Type: </strong>{currentProduct.denomination}</p>
+              <p><strong>Type: </strong>{currentProduct.denomination}</p>
 
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
-            <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
+              <p>
+                <strong>Price:</strong>${currentProduct.price}{' '}
+                <button onClick={addToCart}>Add to Cart</button>
+                <button
+                  disabled={!cart.find((p) => p._id === currentProduct._id)}
+                  onClick={removeFromCart}
+                >
+                  Remove from Cart
+                </button>
+              </p>
+            </div>
+            <div className='main2'>
+              <img
+                  src={`/images/${currentProduct.image}`}
+                  alt={currentProduct.name}
+                />
+              </div>
+           </div>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}

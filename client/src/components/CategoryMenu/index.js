@@ -9,8 +9,12 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import ProductList from '../ProductList';
 let denom = ""
+var clicked = ""
 var setDenom = function(changedenom) {
  denom = changedenom
+}
+var hideConent = function(element) {
+  console.log(element)
 }
 function CategoryMenu() {
   const [state, dispatch] = useStoreContext();
@@ -19,7 +23,6 @@ function CategoryMenu() {
 
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
   const { currentCategory } = state;
-
 
   useEffect(() => {
     if (categoryData) {
@@ -68,15 +71,24 @@ function CategoryMenu() {
           {item.name}
         </button>
       ))}
-     <button className = {denom === "Indica" ? 'active' : ''}  onClick={() => {setDenom("Indica");
-      handleClick(currentCategory)}}>indica</button>
-     <button className = {denom === "Sativa" ? 'active' : ''} onClick={() => {setDenom("Sativa");
-      handleClick(currentCategory)}}>Sativa</button>
-     <button className = {denom === "Hybrid" ? 'active' : ''} onClick={() => {setDenom("Hybrid");
-      handleClick(currentCategory)}}>Hybrid</button>
-     <button onClick={() => {setDenom("");
-      handleClick(currentCategory)}}>Reset</button>
-
+      <ul className='filter-denomination-ul hidden'>
+        <li>
+          <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
+            handleClick(currentCategory)}}>indica</button>
+        </li>
+        <li>
+          <button className = {denom === "Sativa" ? 'filter-button-active' : 'filter-button'} onClick={() => {setDenom("Sativa");
+            handleClick(currentCategory)}}>Sativa</button>
+        </li>
+        <li>
+          <button className = {denom === "Hybrid" ? 'filter-button-active' : 'filter-button'} onClick={() => {setDenom("Hybrid");
+            handleClick(currentCategory)}}>Hybrid</button>
+        </li>
+        <li>
+          <button className={"filter-button"} onClick={() => {setDenom("");
+            handleClick(currentCategory)}}>Reset</button>
+        </li>
+      </ul>
        <ProductList 
         denomination={ denom }
         />
