@@ -53,8 +53,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      
+    <div className='category-container'>
       <h2>Choose a Category:</h2>
         <button className={"category-buttons"}
  onClick={() => {
@@ -71,7 +70,8 @@ function CategoryMenu() {
           {item.name}
         </button>
       ))}
-      <ul className='filter-denomination-ul hidden'>
+      <ul className='filter-denomination-ul'>
+        <h2>Filter by denomination</h2>
         <li>
           <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
             handleClick(currentCategory)}}>indica</button>
