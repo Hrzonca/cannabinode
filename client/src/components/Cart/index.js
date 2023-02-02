@@ -105,9 +105,11 @@ const Cart = () => {
             <h3>
                Your Shopping Cart Is Empty.
              </h3>
-             <p>
-               Sign In To View Your Cart
-             </p>
+             {Auth.loggedIn() ? (
+              <p>add items to your cart</p>
+            ) : (
+              <p>login to buy stuff</p>
+            )}
         </div>
 
       )}
