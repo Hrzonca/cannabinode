@@ -9,10 +9,12 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { idbPromise } from '../../utils/helpers';
 import ProductList from '../ProductList';
 let denom = ""
+// eslint-disable-next-line
 var clicked = ""
 var setDenom = function(changedenom) {
  denom = changedenom
 }
+// eslint-disable-next-line
 var hideConent = function(element) {
   console.log(element)
 }
@@ -42,6 +44,7 @@ function CategoryMenu() {
       });
     }
   }, [categoryData, loading, dispatch]);
+  // eslint-disable-next-line
   let lastpressed;
 
   const handleClick = (id,) => {
