@@ -51,7 +51,7 @@ function ProductItem(item) {
       </Link>
       <div>
         <div className="flex-row">
-            <h3 className={denomination.toLowerCase()}>{denomination}</h3>
+            <h3 className={denomination}>{denomination}</h3>
         </div>
       {quantity < 5 ?
        <div><strong>Act Fast -</strong> Only {quantity} {pluralize("item", quantity)} left in stock!</div> :
