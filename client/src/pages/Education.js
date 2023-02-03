@@ -5,7 +5,7 @@ const Education = () => {
         <div className="education-container">    
             <div className="education-h1-div">
                 
-                <h1 >Higher Education</h1>    
+                <h1>Higher Education</h1>    
 
             </div>
             <div className="edcucation-container-content">
@@ -41,7 +41,7 @@ const Education = () => {
                 </ul>
             </div>
 
-            <div>
+            <div className="mb-5">
                 <h2>Forms</h2>
                 <p>Cannabis comes in many forms to give the user options on how they want to ingest it. Forms include flower, topical, edible, tincutre, and extract. </p>
 
