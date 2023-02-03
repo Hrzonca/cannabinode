@@ -64,10 +64,10 @@ function CategoryMenu() {
             <li>
               <button
                 key={item._id}
-                className={"category-buttons"}
                 onClick={() => {
                   handleClick(item._id);
                 }}
+                className = {currentCategory === item._id ? 'category-buttons active' : 'category-buttons'}
               >
                 {item.name}
               </button>
@@ -77,15 +77,15 @@ function CategoryMenu() {
      <h2>Filter by Denomination:</h2>
       <ul className='filter-ul'>
         <li>
-          <button className = {denom === "Indica" ? 'filter-button-active' : 'filter-button'}  onClick={() => {setDenom("Indica");
+          <button className = {denom === "Indica" ? 'filter-button active' : 'filter-button'}  onClick={() => {setDenom("Indica");
             handleClick(currentCategory)}}>Indica</button>
         </li>
         <li>
-          <button className = {denom === "Sativa" ? 'filter-button-active' : 'filter-button'} onClick={() => {setDenom("Sativa");
+          <button className = {denom === "Sativa" ? 'filter-button active' : 'filter-button'} onClick={() => {setDenom("Sativa");
             handleClick(currentCategory)}}>Sativa</button>
         </li>
         <li>
-          <button className = {denom === "Hybrid" ? 'filter-button-active' : 'filter-button'} onClick={() => {setDenom("Hybrid");
+          <button className = {denom === "Hybrid" ? 'filter-button active' : 'filter-button'} onClick={() => {setDenom("Hybrid");
             handleClick(currentCategory)}}>Hybrid</button>
         </li>
         <li>

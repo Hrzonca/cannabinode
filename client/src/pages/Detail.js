@@ -89,11 +89,13 @@ function Detail() {
             <div className='main1'>
               <Link to="/">← Back to Products</Link>
 
-              <h2>{currentProduct.name}</h2>
-
+              <h1>{currentProduct.name}</h1>
+                <div className='flex-row py-2'>
+                  <h3 className={currentProduct.denomination}>{currentProduct.denomination}</h3>
+                </div>
+                <p>Size</p>
               <p>{currentProduct.description}</p>
 
-              <p><strong>Type: </strong>{currentProduct.denomination}</p>
 
               <p>
                 <strong>Price:</strong>${currentProduct.price}{' '}
