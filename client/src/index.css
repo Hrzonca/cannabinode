@@ -120,11 +120,11 @@ header ul li a:hover {
 label {
   font-size: larger;
 }
-input {
+body input {
   background-color: var(--grey);
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: solid 2px #5c67746c;
   display: flex;
   align-items: center;
