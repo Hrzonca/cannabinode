@@ -51,7 +51,7 @@ function ProductItem(item) {
       </Link>
       <div className="white-text">
         <div className="flex-row justify-content-center">
-            <h3 className={denomination.toLowerCase()}>{denomination}</h3>
+            <h3 className={denomination}>{denomination}</h3>
         </div>
 
       {quantity < 5 ?

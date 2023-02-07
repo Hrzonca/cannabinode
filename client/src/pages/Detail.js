@@ -93,20 +93,60 @@ function Detail() {
                 <div className='flex-row py-2'>
                   <h3 className={currentProduct.denomination}>{currentProduct.denomination}</h3>
                 </div>
-                <p>Size</p>
-              <p>{currentProduct.description}</p>
+                <div>
+                   <p>Size</p>
+                    <ul className='individual-sizes-ul'>
+                      <li>
+                        <div className='sizes-inner-conatainer'>
+                          <p>$ {currentProduct.price * 14}</p>
+                          <div>
+                            <p>1oz</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li> <div className='sizes-inner-conatainer'>
+                          <p>$ {currentProduct.price * 7}</p>
+                          <div>
+                            <p>1/2oz</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li> <div className='sizes-inner-conatainer'>
+                          <p>$ {currentProduct.price * 3}</p>
+                          <div>
+                            <p>1/8oz</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li> <div className='sizes-inner-conatainer'>
+                          <p>$ {currentProduct.price}</p>
+                          <div>
+                            <p>1g</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+                <div>
+                  <p>Quantity</p>
+                  <p className='quantity-button'>1</p>
+                  <div className='addtocart-div'>
+                      <button className="addtocart-button" onClick={addToCart}>Add to Cart</button>
+                  </div>
+                  <div className='addtocart-div'>
+                    <button
+                        disabled={!cart.find((p) => p._id === currentProduct._id)}
+                        onClick={removeFromCart}
+                      >
+                        Remove from Cart
+                      </button>
+                  </div>
+                </div>
+                <div className='description-div'>
+                  <h2>Description</h2>
+                  <p className='product-description'>{currentProduct.description}</p>
+                </div>
 
-
-              <p>
-                <strong>Price:</strong>${currentProduct.price}{' '}
-                <button onClick={addToCart}>Add to Cart</button>
-                <button
-                  disabled={!cart.find((p) => p._id === currentProduct._id)}
-                  onClick={removeFromCart}
-                >
-                  Remove from Cart
-                </button>
-              </p>
             </div>
             <div className='main2'>
               <img
