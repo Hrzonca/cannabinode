@@ -15,8 +15,8 @@
 
 html,
 body {
-  min-height: 100%;
-  background-color: #121212;
+  min-height: 100vh;
+  background-color: #091016cc;
 }
 
 body {
@@ -117,6 +117,18 @@ header ul li a:hover {
   background-color: #DCDCDD60;
   transition: color .3s ease-in-out;
 }
+label {
+  font-size: larger;
+}
+input {
+  background-color: var(--grey);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px #5c67746c;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 3px 5px 2px black;}
 button {
   font-size: 1rem;
   text-decoration: none;
@@ -128,6 +140,7 @@ button {
   font-size: 20px;
   background-color: #35CE8D;
   margin: 0 1px;
+  box-shadow: 4px 3px 5px 1px black;
   transition: opacity .3s ease-in-out;
 }
 
@@ -151,13 +164,6 @@ button[disabled] {
   background-color: red;
 }
 
-img {
-  max-width: 100%;
-  border-style: solid;
-  border-color: black;
-  border-radius: 5px;
-}
-
 span[role="img"] {
   cursor: pointer;
 }
@@ -169,7 +175,7 @@ form {
 input {
   font-size: 1rem;
   padding: 0.25rem;
-  border: 1px solid var(--dark);
+  border: 1px solid var(--grey);
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
@@ -240,7 +246,39 @@ height: 300px;
   display: inline;
   padding: 1px;
 }
-
+.individual-sizes-ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.individual-sizes-ul li {
+  background-color: var(--grey);
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  display: inline;
+  margin: 4px;
+  border: solid 2px #5c67746c;
+  cursor: pointer;
+  box-shadow: 4px 3px 5px 1px black;
+}
+.individual-sizes-ul li:hover {
+  border: solid 2px var(--green);
+}
+.sizes-inner-conatainer {
+  text-align: center;
+}
+.sizes-inner-conatainer p{
+  padding-top: 10px;
+}
+.sizes-inner-conatainer div {
+  background-color: #303a46a2;
+  height: 32px;
+  border-radius: 0 0 9px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .filter-button{
   width: 100px;
   padding: 7px;
@@ -248,10 +286,57 @@ height: 300px;
   color: white;
 }
 
+.quantity-button{
+  background-color: var(--grey);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px #5c67746c;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 3px 5px 2px black;
+}
+.quantity-button:hover {
+  border: solid 2px var(--green);
+}
 .justify-content-center {
   justify-content: center;
 }
-
+.addtocart-div button{
+  background-color: var(--green);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px #5c67746c;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  box-shadow: 5px 3px 5px 2px black;
+}
+.description-div h2 {
+  margin-top: 15px;
+  padding: 5px;
+  border-bottom: solid 2px black;
+}
+.product-description {
+  padding: 20px;
+  border-bottom: solid 2px black;
+}
+.addtocart-button:hover, .card button:hover {
+  background-color: white;
+  color: var(--green);
+  opacity: 1;
+}
+@media screen and (max-width: 1000px){
+  .single-view-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'main1'
+    'main2';
+    grid-gap: 1rem;
+  }
+}
 .space-between {
   justify-content: space-between;
 }
@@ -315,24 +400,29 @@ background-color: #7100808a;
 padding: 5px;
 border-radius: 7px;
 color: #E5D0E3;
+box-shadow: 4px 3px 5px 1px black;
 }
 .Indica {
   background-color: rgba(0, 0, 255, 0.45);
   padding: 5px;
   border-radius: 7px;
-  color: #AEE5D8
+  color: #AEE5D8;
+  box-shadow: 4px 3px 5px 1px black;
 }
 .Sativa {
   background-color: rgba(255, 0, 0, 0.45);
   padding: 5px;
   border-radius: 7px;
   color:  #F7AF9D;
+  box-shadow: 4px 3px 5px 1px black;
 }
+
 .card {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-color: grey;
+  border: solid 2px #5c67746c;
+  background-color: var(--grey);
   border-radius: 8px;
   margin: 10px;
   font-size: 20px;
@@ -341,9 +431,17 @@ color: #E5D0E3;
   transition: all .3s ease-in-out;
   color: white;
 }
+.card img {
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px;
+}
+
 .card:hover {
 width: 95%;
 height: 95%;
+
 }
 .card h2 {
   font-size: 26px;
