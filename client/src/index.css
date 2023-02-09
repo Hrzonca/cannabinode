@@ -457,6 +457,10 @@ height: 95%;
   color: yellow;
 }
 
+.education-footer {
+  padding-bottom: 20px;
+}
+
 @media screen and (max-width: 1200px) {
   .body-grid {
     grid-template-columns: 1fr 1fr 1fr;
